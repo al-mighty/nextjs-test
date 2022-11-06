@@ -2,7 +2,7 @@ import {Header} from "antd/lib/layout/layout";
 import React from "react";
 
 import s from './header.module.scss';
-import {Profile} from "../Profile";
+ // import {Profile} from "../Profile";
 import Menu, {MenuProps} from "antd/lib/menu";
 import styled from "styled-components";
 import {Avatar} from "antd";
