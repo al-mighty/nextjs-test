@@ -5,27 +5,49 @@ import {
     XAxis,
     YAxis,
     CartesianGrid,
-    Tooltip
+    Tooltip,
+    ResponsiveContainer,
+    Label,
+    Line,
+    ComposedChart
 } from "recharts";
 
 const data = [
     {
-        month: "2015.01",
-        a: 4000,
-        b: 2400,
+        year: 2000,
+        a: 300,
+        b: 200,
+        y:190,
+        c: 2400,
+        levelSecond:300,
+        levelOne:200,
+        // c: 2400
+    },
+    {
+        year: 2003,
+        a: 300,
+        b: 200,
+        y:220,
+        levelSecond:300,
+        levelOne:200,
         c: 2400
     },
     {
-        month: "2015.07",
-        a: 4000,
-        b: 2400,
-        c: 2400
+        year: 2005,
+        a: 300,
+        b: 200,
+        c: 2400,
+        levelSecond:300,
+        levelOne:200,
+        y:220,
     }
 ];
 
-const toPercent = (decimal: number, fixed: number = 0) =>
-    `${(decimal * 100).toFixed(fixed)}%`;
-
+const toPercent = (decimal: number, fixed: number = 0) => {
+    console.log('value - ',decimal)
+    console.log('fixed - ',fixed)
+    return `${(decimal * 100).toFixed(fixed)}%`;
+}
 const getPercent = (value: number, total: number) => {
     const ratio = total > 0 ? value / total : 0;
 
@@ -55,44 +77,50 @@ const renderTooltipContent = (o: any) => {
 
 const Chart=()=> {
     return (
-        <AreaChart
-            width={500}
-            height={400}
+        <ResponsiveContainer width={442} height={210}>
+        <ComposedChart
+            // width={500}
+            // height={400}
             data={data}
             stackOffset="expand"
             margin={{
-                top: 10,
-                right: 30,
+                top: 50,
+                right: 50,
                 left: 0,
                 bottom: 0
             }}
         >
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="month" />
-            <YAxis tickFormatter={toPercent} />
-            {/*<Tooltip content={renderTooltipContent} />*/}
+            <XAxis
+                dataKey="year"
+            >
+                <Label value="год"   offset={15} position="right"  />
+            </XAxis>
+            <YAxis
+                tickCount={4}
+                ticks={[0,100,200,300]}
+            >
+                <Label value="мг/дл" offset={15} position="top" />
+            </YAxis>
+            <Tooltip />
             <Area
                 type="monotone"
-                dataKey="a"
-                stackId="1"
+                dataKey="levelSecond"
                 stroke="#8884d8"
-                fill="#8884d8"
+                fill="#B5F5B4"
+                opacity={0.6}
             />
             <Area
+                // yAxisId={'y'}
                 type="monotone"
-                dataKey="b"
-                stackId="2"
+                dataKey="levelOne"
                 stroke="#82ca9d"
-                fill="#82ca9d"
+                fill="#FEAAAA"
+                opacity={0.6}
             />
-            <Area
-                type="monotone"
-                dataKey="c"
-                stackId="3"
-                stroke="#ffc658"
-                fill="#ffc658"
-            />
-        </AreaChart>
+            <Line type="monotoneX" dataKey="y" stroke="#6D6B80" strokeWidth={2} />
+        </ComposedChart>
+        </ResponsiveContainer>
     );
 }
 
