@@ -16,6 +16,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color:var(--textColor);
 }
 
 .text-left {
@@ -174,20 +181,24 @@ body {
   margin-left: 3rem !important;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  white-space: nowrap;
-  color: var(--primaryColor);
-  justify-content: center;
-}
-
-.logo > svg {
-  fill: var(--primaryColor);
-}
 
 .text-disabled {
   color: var(--textColorSecondary) !important;
+}
+li {
+  list-style-type: none;
+}
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+#__next  *,h1,h2,h3,h4,h5,h6,label,span {
+  color:var(--textColor);
+}
+
+
+.mainLayout{
+  max-width: 1068px;
+  margin:0 auto;
+  position: relative;
 }
