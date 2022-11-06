@@ -7,7 +7,7 @@ export const ContentC = (props: any) => {
         // overflow: 'initial',
         // marginTop: 88,
         // marginTop: 64,
-        background: '#E9EDF6'}}>
+        background: '#E9EDF6', display: 'flex'}}>
         {props.children}
     </Content>
 }
