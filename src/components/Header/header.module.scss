@@ -26,17 +26,17 @@
   overflow: hidden;
   .block {
     width: 80%;
-      ul {
-        margin: 0;
-        li {
-          display: inline;
-          margin-right: 32px;
+    ul {
+      margin: 0;
+      li {
+        display: inline;
+        margin-right: 32px;
 
-          a {
-            color: unset;
-          }
+        a {
+          color: unset;
         }
       }
+    }
   }
 }
 .profile {
