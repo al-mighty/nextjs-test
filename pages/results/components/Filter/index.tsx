@@ -33,7 +33,8 @@ const OPTIONS_YEAR = [
 
 const SelectedParams: React.FC = () => {
     const [form] = Form.useForm();
-    const onReset = () => {
+    const onReset = (e:any) => {
+        e.preventDefault();
         form.resetFields();
     };
     const initialValues={
@@ -53,17 +54,17 @@ const SelectedParams: React.FC = () => {
                 <Form.Item name={'years'} label="Выберите год исследования">
                     <Checkbox.Group options={OPTIONS_YEAR} onChange={onChange} />
                 </Form.Item>
-                <Row gutter={[16, 16]}>
+                <Row style={{textAlign:'left'}}>
                     <Col span={12} >
-                        <Button
-                            type="text" onClick={onReset}>
-                            Сбросить фильтры
-                        </Button>
+                        <a
+                            href={'#'} onClick={onReset}>
+                            Скрыть фильтры
+                        </a>
                     </Col>
                     <Col span={12} >
-                        <Button type="text" onClick={onReset}>
-                            Свернуть фильтры| Показать фильтры
-                        </Button>
+                        <a href={'#'} onClick={onReset}>
+                            Свернуть фильтры
+                        </a>
                     </Col>
                 </Row>
             </Form>

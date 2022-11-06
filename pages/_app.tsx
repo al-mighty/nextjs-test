@@ -12,37 +12,36 @@ import {LeftMenu} from '../src/components/LeftMenu'
 function MyApp({Component, pageProps}: AppProps) {
     return (<Layout
         className={'mainLayout'}
-        // hasSider
+        hasSider
     >
         <HeaderC/>
         <Layout className="site-layout"
                 style={{
                     minHeight: "100vh",
-                    // marginLeft: 90,
                     position: 'relative'
                 }}
         >
 
             <ContentC>
-                <div style={{
-                    position: 'absolute',
-                }}>
-                    <Sider theme={'light'}
-                           width={110}
-                           className={'slider'}
-                           style={{
-                               paddingTop: 60,
-                               overflow: 'auto',
-                               height: '100vh',
-                               position: 'fixed',
-                               top: 0,
-                               bottom: 0,
-                           }}
-                    >
-                        <LeftMenu/>
-                    </Sider>
-                </div>
-                <div style={{paddingLeft: 110, paddingTop: 64}}>
+                <Sider theme={'light'}
+                       width={110}
+                       className={'slider'}
+                       style={{
+                           paddingTop: 60,
+                           overflow: 'auto',
+                           height: '100%',
+                           position: 'fixed',
+                           top: 0,
+                           bottom: 0,
+                       }}
+                >
+                    <LeftMenu/>
+                </Sider>
+                <div style={{marginLeft: 110, marginTop: 80,
+                    // maxWidth: '100%',
+                    // width: '100%'
+                }}
+                >
                     <Component {...pageProps} />
                 </div>
             </ContentC>

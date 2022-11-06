@@ -1,11 +1,9 @@
 import React from 'react';
-import {StyledContainer} from "../src/components/Container";
-
 
 
 export default function Home() {
     return (
-        <StyledContainer>
+        <div className={'container'}>
             <p>long content</p>
             {
                 // indicates very long content
@@ -16,6 +14,6 @@ export default function Home() {
                     </React.Fragment>
                 ))
             }
-        </StyledContainer>
+        </div>
     )
 }

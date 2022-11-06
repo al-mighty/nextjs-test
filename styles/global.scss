@@ -22,7 +22,7 @@ body {
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
-  color:var(--textColor);
+  color: var(--textColor);
 }
 
 .text-left {
@@ -185,20 +185,65 @@ body {
 .text-disabled {
   color: var(--textColorSecondary) !important;
 }
+
 li {
   list-style-type: none;
 }
+
 ul {
   margin-left: 0;
   padding-left: 0;
 }
-#__next  *,h1,h2,h3,h4,h5,h6,label,span {
-  color:var(--textColor);
+
+#__next h1, h2, h3, h4, h5, h6 {
+  color: var(--textColor);
 }
 
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #8284EA;
+  border-color: #8284EA;
+}
 
-.mainLayout{
+.ant-table {
+  background: unset;
+}
+
+.ant-table table {
+  border-radius: unset !important;
+  border-collapse: unset !important;
+  border-spacing: 0px 8px;
+}
+
+.ant-table-tbody {
+  &:hover,
+  tr:hover,
+  thead:hover {
+    background: unset !important;
+    border: 0 !important;
+  }
+
+  tr > td {
+    border-bottom: 0;
+  }
+
+  .ant-table-tbody > tr.ant-table-row > td.ant-table-cell .ant-table-cell-row-hover {
+    background: none !important;
+  }
+}
+
+.mainLayout {
   max-width: 1068px;
-  margin:0 auto;
-  position: relative;
+  margin: 0 auto;
+}
+
+.container {
+  background: white;
+
+  &.inactive {
+    background: #F0F3F9;
+  }
+
+  padding: 16px;
+  max-width: 913px;
+  margin: 16px 16px 0 16px;
 }
