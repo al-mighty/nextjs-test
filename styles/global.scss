@@ -17,7 +17,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 
-  font-family: 'Roboto';
+  font-family: 'Roboto', serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -211,7 +211,7 @@ ul {
 .ant-table table {
   border-radius: unset !important;
   border-collapse: unset !important;
-  border-spacing: 0px 8px;
+  border-spacing: 0 8px;
 }
 
 .ant-table-tbody {
@@ -246,4 +246,29 @@ ul {
   padding: 16px;
   max-width: 913px;
   margin: 16px 16px 0 16px;
+}
+
+h1{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  margin-left: 16px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.ant-form-item-label label,h2{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+}
+
+.LeftMenuUl{
+  text-align:center;
+  li{
+    margin-top:15px;
+  }
 }

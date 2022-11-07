@@ -5,7 +5,6 @@
 
     &:first-child {
       margin-top: 0;
-      //background: unset!important;
     }
 
     &:hover {
@@ -18,7 +17,6 @@
       font-size: 13px;
       line-height: 24px;
       padding: 4px 12px;
-      /* identical to box height, or 185% */
 
       letter-spacing: 0.5px;
       background: unset !important;
@@ -45,6 +43,45 @@
         //transition:unset!important;
         //background: unset!important;
         //border:unset!important;
+      }
+    }
+  }
+}
+
+.fullTable {
+  margin-bottom: 32px;
+
+  table {
+    tbody {
+      tr {
+        th {
+          background: unset !important;
+        }
+
+        td {
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 24px;
+          //letter-spacing: 0.5px;
+
+          padding: 16px 14px;
+
+          color: var(--textColor);
+          background: #fff!important;
+
+          &.ant-table-cell-row-hover {
+            &:hover {
+              color: white;
+              background: #8284EA !important;
+            }
+            color: white;
+            background: #8284EA !important;
+          }
+        }
+
+        &:hover {
+          background: #8284EA !important;
+        }
       }
     }
   }

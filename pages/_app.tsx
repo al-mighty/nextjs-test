@@ -37,10 +37,7 @@ function MyApp({Component, pageProps}: AppProps) {
                 >
                     <LeftMenu/>
                 </Sider>
-                <div style={{marginLeft: 110, marginTop: 80,
-                    // maxWidth: '100%',
-                    // width: '100%'
-                }}
+                <div style={{marginLeft: 110, marginTop: 64}}
                 >
                     <Component {...pageProps} />
                 </div>
