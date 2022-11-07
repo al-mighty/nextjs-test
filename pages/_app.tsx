@@ -4,7 +4,7 @@ import '../styles/vars.scss'
 import '../styles/global.scss'
 import {Layout} from "antd";
 import {HeaderC} from "../src/components/Header";
-import {ContentC} from "../src/components/Content";
+import {Content} from "antd/lib/layout/layout";
 import React from "react";
 import Sider from 'antd/lib/layout/Sider'
 import {LeftMenu} from '../src/components/SideBar'
@@ -22,7 +22,8 @@ function MyApp({Component, pageProps}: AppProps) {
                 }}
         >
 
-            <ContentC>
+            <Content style={{
+                background: '#E9EDF6', display: 'flex'}}>
                 <Sider theme={'light'}
                        width={110}
                        className={'slider'}
@@ -41,7 +42,7 @@ function MyApp({Component, pageProps}: AppProps) {
                 >
                     <Component {...pageProps} />
                 </div>
-            </ContentC>
+            </Content>
         </Layout>
     </Layout>)
 }
