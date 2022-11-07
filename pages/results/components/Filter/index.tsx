@@ -1,10 +1,6 @@
 import {Checkbox, Col, Form, Row } from 'antd';
-import type { CheckboxValueType } from 'antd/es/checkbox/Group';
 import React from 'react';
 
-const onChange = (checkedValues: CheckboxValueType[]) => {
-    console.log('checked = ', checkedValues);
-};
 const OPTIONS_MATERIAL = [
     { label: 'кровь', value: 'blood' },
     { label: 'моча', value: 'urine' },
@@ -38,13 +34,13 @@ const SelectedParams = (props:any) => {
         <>
             <Form layout={'vertical'} onFieldsChange={onChangeField} form={form} initialValues={selectedParams}>
                 <Form.Item name={'materials'} label="Выберите материал">
-                    <Checkbox.Group options={OPTIONS_MATERIAL} onChange={onChange} />
+                    <Checkbox.Group options={OPTIONS_MATERIAL}/>
                 </Form.Item>
                 <Form.Item name={'analyzes'} label="Выберите анализ">
-                    <Checkbox.Group options={OPTIONS_ANALYSIS} onChange={onChange} />
+                    <Checkbox.Group options={OPTIONS_ANALYSIS}/>
                 </Form.Item>
                 <Form.Item  name={'years'} label="Выберите год исследования">
-                    <Checkbox.Group  options={OPTIONS_YEAR} onChange={onChange} />
+                    <Checkbox.Group  options={OPTIONS_YEAR}/>
                 </Form.Item>
                 <Row style={{textAlign:'left'}}>
                     <Col span={12} >
