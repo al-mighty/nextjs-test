@@ -7,7 +7,7 @@ import {HeaderC} from "../src/components/Header";
 import {ContentC} from "../src/components/Content";
 import React from "react";
 import Sider from 'antd/lib/layout/Sider'
-import {LeftMenu} from '../src/components/LeftMenu'
+import {LeftMenu} from '../src/components/SideBar'
 
 function MyApp({Component, pageProps}: AppProps) {
     return (<Layout
